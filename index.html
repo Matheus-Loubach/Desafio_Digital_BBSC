@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio Digital</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="src/style/global.css">
+</head>
+
+<body>
+
+    <header class="flex justify-around text-center items-center p-4 text-white bg-red-500 text-black-800">
+        <h1 class="text-2xl	"> <a href="/index.html">Cardapio Digital</a></h1>
+        <nav>
+            <ul class="flex p-4">
+                <li class="mr-5 text-lg"><a href="/index.html">Hambúrgueres</a></li>
+                <li class="text-lg"><a href="/cart.html"> <img class="w-6 absolute" src="./src/assents/carrinho.png"
+                            alt="car"><span id="cartSize" class="relative left-7"></span> </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div>
+            <p id="message"
+                class="absolute text-white text-2xl rounded-xl bg-red-500 mt-10 ml-3 text-white w-auto h-10 pl-2 top-90">
+            </p>
+        </div>
+        <ul id="cartList" class="grid grid-cols-1 sm:grid-cols-4 sm:gap-0 justify-center ml-16"></ul>
+    </div>
+
+
+
+    <script type="module" src="src/scripts/menu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-color: #000000;
+}
+
+.container ul li {
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+    background-color: #dadada;
+    justify-content: center;
+    text-align: center;
+}
+
+.container ul li button:hover {
+    color: rgb(230, 0, 0);
+}
+
+.container ul img {
+    max-width: 250px;
+    max-height: 120px;
+    margin: auto;
+}
