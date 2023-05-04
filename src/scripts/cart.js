@@ -66,26 +66,26 @@ function removeProduct(id) {
     renderCart();
 }
 
-//Total das compras
+// Calculate the total cart value
 function updateTotal() {
 
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
-    const SomaTotal = document.createElement('p');
+    const totalProducts  = document.createElement('p');
     const p = document.getElementById("total");
-    let valorTotal = 0;
+    let totalValue  = 0;
 
     cart.forEach((item) => {
-        valorTotal += item.price * item.quantidade;
+        totalValue  += item.price * item.quantidade;
     });
 
-    valorTotal <= 0 ? SomaTotal.innerHTML = "Nenhum item no carrinho" : SomaTotal.innerHTML = `Valor total: R$ ${valorTotal}`
+    totalValue  <= 0 ? totalProducts.innerHTML = "Nenhum item no carrinho" : totalProducts.innerHTML = `Valor total: R$ ${totalValue}`
 
-    // Remove o preço antigo, se existir
+    // Remove the old element from the DOM, if it exists
     if (p.firstChild) {
         p.removeChild(p.firstChild);
     }
 
-    p.appendChild(SomaTotal);
+    p.appendChild(totalProducts);
 
 }
 

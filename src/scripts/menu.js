@@ -52,7 +52,6 @@ function checkCart(product) {
     // Checks if product is already in cart
     const productInCart = cart.filter(item => item.id === product.id)[0];
     productInCart ? productInCart.quantidade++ : cart.push({ ...product, quantidade: 1 });
-    console.log(cart);
 
     setTimeout(() => {
       localStorage.setItem('cart', JSON.stringify(cart));
